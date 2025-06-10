@@ -217,7 +217,7 @@ async def history_summary(update: Update, context: ContextTypes.DEFAULT_TYPE):
                 {"role": "system", "content": "Ты внимательный, тёплый и понимающий помощник. Не используй слово 'пользователь'."},
                 {"role": "user", "content": summary_prompt}
             ],
-            max_tokens=400,
+            max_tokens=700,
             temperature=0.6
         )
         reply = response.choices[0].message.content
