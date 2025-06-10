@@ -1,27 +1,9 @@
-# .gitignore for Python Telegram Bot project
+.env
 __pycache__/
-*.py[cod]
-*.log
-*.sqlite3
+*.pyc
+*.pyo
+*.pyd
 *.db
-
-# Virtual environment folders
-venv/
+*.sqlite3
+.reflections.json
 .venv/
-ENV/
-.env/
-
-# PyCharm project files
-.idea/
-
-# OS-specific
-.DS_Store
-Thumbs.db
-
-# Sensitive or generated
-reflections.json
-consultant_prompt.txt
-
-# Token files or API keys
-openai_api_key.txt
-*.secret

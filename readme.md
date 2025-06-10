@@ -1,80 +1,69 @@
-# 🌿 Ritual Reflection Bot
+# Ritual Reflection Bot
 
-A warm and mindful Telegram bot that guides users through a weekly self-reflection ritual — and offers gentle AI-based support during emotional moments.
-
-> "Everything you feel — matters. Everything you say — stays between us."
+🌿 Telegram-бот для мягкой вечерней саморефлексии и заботливого анализа внутреннего состояния с поддержкой OpenAI.
 
 ---
 
-## ✨ Features
+## ✨ Возможности
 
-- **/start** — welcome message and cozy main menu
-- **/ritual** — step-by-step self-reflection ritual:
-  - Body and emotion check-in
-  - Identifying active inner voices
-  - Choosing a weekly focus
-  - Making a promise to oneself
-- **/talk** — warm, supportive AI consultation (powered by GPT-4)
-- **/cancel** — stop any conversation at any time
-- **Auto-save** — reflections stored in `reflections.json`
+- Пошаговый ритуал саморефлексии (тело, внутренние голоса, фокус, обещание)
+- Диалог с заботливым AI-консультантом
+- История ваших записей и AI-анализ повторяющихся тем
+- Напоминания в 20:00, если за день не было ритуала
+- Поддержка собственных вариантов ответов на каждом этапе
 
 ---
 
-## 🧠 AI Support
+## 🚀 Установка
 
-The `/talk` feature uses OpenAI GPT-4 with a soft prompt stored in `consultant_prompt.txt`. You can edit this file to tune the tone and personality of the assistant.
-
-Example prompt:
-```
-You are a caring and warm assistant. Your job is to listen, not judge. Speak with empathy and gentleness. Be a warm blanket in words.
-```
-
----
-
-## 🔧 Installation
-
-1. Clone the repo:
+1. Клонируйте репозиторий:
 ```bash
-git clone https://github.com/yourusername/ritual-reflection-bot.git
+git clone https://github.com/ViolGer/ritual-reflection-bot.git
 cd ritual-reflection-bot
 ```
 
-2. Install dependencies:
+2. Установите зависимости:
 ```bash
 pip install -r requirements.txt
 ```
 
-3. Add your API keys:
-- Replace `YOUR_BOT_TOKEN_HERE` in the code with your Telegram bot token
-- Replace `YOUR_OPENAI_API_KEY_HERE` with your OpenAI API key
+3. Создайте файл `.env` в корне проекта:
+```env
+TELEGRAM_TOKEN=your_telegram_token
+OPENAI_KEY=your_openai_api_key
+```
+
+> ❗️ Убедитесь, что `.env` включён в `.gitignore` и не попадает в коммиты
 
 ---
 
-## 🧪 Run the bot
+## ▶️ Запуск
 ```bash
 python main.py
 ```
+Бот запустится и будет отвечать на команды в Telegram. Напоминания включаются автоматически.
 
 ---
 
-## 📦 Folder structure
-```
-ritual-reflection-bot/
-├── main.py                  # Main bot logic
-├── consultant_prompt.txt    # AI behavior template
-├── reflections.json         # Stored reflections (auto-generated)
-├── .gitignore
-└── README.md
-```
+## 📁 Структура
+- `main.py` — основная логика бота
+- `reflections.json` — хранение пользовательских записей
+- `consultant_prompt.txt` — системный промпт для AI-консультанта
+- `.env` — токены (не публикуется)
 
 ---
 
-## 💬 Future ideas
-- Weekly reminders (via apscheduler)
-- Web dashboard to visualize reflections
-- Support for anonymous journaling and mood tracking
+## 🔐 Безопасность
+- `.env` и другие чувствительные файлы исключены из git (`.gitignore`)
+- История очищается от ключей при коммитах
+- Не публикуйте токены в коде или в истории коммитов
 
 ---
 
-## 🌷 License
-MIT — but please use kindly 🌱
+## 💡 Планы
+- Добавить поддержку медиафайлов (голос, фото)
+- Настраиваемые напоминания
+- Синхронизация с облаком / Google Sheets
+- Интерфейс на нескольких языках
+
+☁️
