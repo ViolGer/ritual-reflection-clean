@@ -1,69 +1,81 @@
-# Ritual Reflection Bot
+# 🌿 Ritual Reflection Bot
 
-🌿 Telegram-бот для мягкой вечерней саморефлексии и заботливого анализа внутреннего состояния с поддержкой OpenAI.
-
----
-
-## ✨ Возможности
-
-- Пошаговый ритуал саморефлексии (тело, внутренние голоса, фокус, обещание)
-- Диалог с заботливым AI-консультантом
-- История ваших записей и AI-анализ повторяющихся тем
-- Напоминания в 20:00, если за день не было ритуала
-- Поддержка собственных вариантов ответов на каждом этапе
+A gentle Telegram bot for mindful evening self-reflection, with AI support via OpenAI.  
+It helps users reconnect with themselves, track patterns, and stay emotionally aware.
 
 ---
 
-## 🚀 Установка
+## ✨ Features
 
-1. Клонируйте репозиторий:
-```bash
-git clone https://github.com/ViolGer/ritual-reflection-bot.git
-cd ritual-reflection-bot
-```
+  Step-by-step evening reflection ritual:
+- Body check-in, inner voices, focus, intention
+- Conversation with a compassionate AI consultant
+- History of your responses with GPT-based insights
+- Daily reminders at 20:00 if no session was completed
+- Custom responses supported at every stage
 
-2. Установите зависимости:
-```bash
+---
+
+## 🚀 Installation
+
+1. Clone the repository:
+
+`bash
+git clone https://github.com/ViolGer/ritual-reflection-clean.git
+cd ritual-reflection-clean
+
+2. Install dependencies:
+
 pip install -r requirements.txt
-```
 
-3. Создайте файл `.env` в корне проекта:
-```env
+3. Create a .env file in the root directory with your keys:
+
 TELEGRAM_TOKEN=your_telegram_token
 OPENAI_KEY=your_openai_api_key
-```
 
-> ❗️ Убедитесь, что `.env` включён в `.gitignore` и не попадает в коммиты
+> ❗️ Make sure .env is included in .gitignore to avoid committing sensitive data.
 
 ---
 
-## ▶️ Запуск
-```bash
+▶️ Running the Bot
+
 python main.py
-```
-Бот запустится и будет отвечать на команды в Telegram. Напоминания включаются автоматически.
+
+Once started, the bot will respond to messages in Telegram.
+Reminders are automatically scheduled for 20:00 each day.
 
 ---
 
-## 📁 Структура
-- `main.py` — основная логика бота
-- `reflections.json` — хранение пользовательских записей
-- `consultant_prompt.txt` — системный промпт для AI-консультанта
-- `.env` — токены (не публикуется)
+📁 Project Structure
+
+main.py — core bot logic
+
+reflections.json — stores user reflection history
+
+consultant_prompt.txt — system prompt for AI consultant
+
+.env — tokens and keys (not committed)
 
 ---
 
-## 🔐 Безопасность
-- `.env` и другие чувствительные файлы исключены из git (`.gitignore`)
-- История очищается от ключей при коммитах
-- Не публикуйте токены в коде или в истории коммитов
+🔐 Security
+
+Tokens and secrets are stored in .env, excluded via .gitignore
+
+Commit history is cleaned from sensitive content
+
+Never push API keys to the repository
 
 ---
 
-## 💡 Планы
-- Добавить поддержку медиафайлов (голос, фото)
-- Настраиваемые напоминания
-- Синхронизация с облаком / Google Sheets
-- Интерфейс на нескольких языках
+💡 Planned Features
+
+Voice and photo support
+
+Customizable reminders
+
+Sync with cloud or Google Sheets
+
+Multilingual interface
 
 ☁️
